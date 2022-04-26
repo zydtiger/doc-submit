@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Submit Docs</title>
+  <script src="/lib76b5a357391276b282a516f54f48ef3c207f46d8192dc58c208d5183d38415f8/jquery/jquery-3.6.0.min.js">
+  </script>
+  <script src="/lib76b5a357391276b282a516f54f48ef3c207f46d8192dc58c208d5183d38415f8/spacingjs.js"></script>
+  <style>
+    form {
+      margin: 20px;
+    }
+
+    .dropbox {
+      border-radius: 10px;
+      border: 3px dashed black;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .dropbox.active {
+      background-color: cyan;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="/upload?event={{event}}" method="post" enctype="multipart/form-data">
+    <h2>{{event}}</h2>
+    <h3>File:</h3>
+    <input type="file" name="uploadFile" class="dropbox" />
+    <input type="submit" value="Upload">
+  </form>
+
+  <script>
+    $('.dropbox').on('dragenter', () => {
+      $('.dropbox').addClass('active')
+    })
+    $('.dropbox').on('dragleave', () => {
+      $('.dropbox').removeClass('active')
+    })
+    $('.dropbox').on('drop', () => {
+      $('.dropbox').removeClass('active')
+    })
+  </script>
+</body>
+
+</html>

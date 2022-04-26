@@ -1,6 +1,7 @@
 const express = require('express'),
-    path = require('path'),
-    config = require('../config')
+  path = require('path'),
+  config = require('../config'),
+  bodyParser = require('body-parser')
 
 const app = express()
 
@@ -13,8 +14,9 @@ console.log(config.public)
 app.set('views', path.resolve(config.root, 'views/'))
 app.engine('html', require('express-art-template'))
 
+app.use(bodyParser.urlencoded({extended: false}))
 app.use(require('./router'))
 
-const server = app.listen(4000, () => {
-    config.log(`Server at ${server.address().address}:${server.address().port}`)
+const server = app.listen(8080, () => {
+  config.log(`Server at ${server.address().address}:${server.address().port}`)
 })

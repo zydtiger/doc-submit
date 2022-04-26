@@ -1,5 +1,5 @@
 {
-  "name": "share-files",
+  "name": "doc-submit",
   "version": "1.0.0",
   "description": "",
   "main": "src/app.js",
@@ -13,8 +13,11 @@
   "dependencies": {
     "art-template": "^4.13.2",
     "basic-auth": "^2.0.1",
+    "body-parser": "^1.20.0",
     "express": "^4.17.1",
     "express-art-template": "^1.0.1",
+    "formidable": "^2.0.1",
+    "fs-extra": "^10.0.1",
     "safe-compare": "^1.1.4",
     "sha256": "^0.2.0"
   },
