@@ -14,7 +14,7 @@ yarn start
 | /makeevent | Post   | event                                  | Make a new event (which is actually a directory)            |
 | /files.*   | Get    | None, or rather, the path is the param | Navigate to the desired file path                           |
 ## Default Admin Password
-Username: Admin
-Password: 123456
-> Authentication necessary at all pages except submission, protecting the files to an extent
+Username: Admin<br>
+Password: 123456<br>
+> Authentication necessary at all pages except submission, protecting the files to an extent<br>
 > Not sure how long the account would be stored
